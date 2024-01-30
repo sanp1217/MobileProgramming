@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logger"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="1dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shootDownBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downButton" />
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="port"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/hostName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hostName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="host name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="44dp"
+        android:text="Connect"
+        app:layout_constraintEnd_toEndOf="@+id/bulletEdit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/armotEdit"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="armor"
+        android:inputType="number"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/scanEdit"
+        app:layout_constraintEnd_toStartOf="@+id/connectButton"
+        app:layout_constraintStart_toStartOf="@+id/hostName" />
+
+    <EditText
+        android:id="@+id/bulletEdit"
+        android:layout_width="52dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="bullet"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/scanEdit"
+        app:layout_constraintEnd_toEndOf="@+id/hostName"
+        app:layout_constraintTop_toTopOf="@+id/scanEdit" />
+
+    <EditText
+        android:id="@+id/scanEdit"
+        android:layout_width="59dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="scan"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/connectButton"
+        app:layout_constraintEnd_toEndOf="@+id/bulletEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostName" />
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/shootDownBtn"
+        app:layout_constraintEnd_toStartOf="@+id/rightButton"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <ImageButton
+        android:id="@+id/upButton"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="78dp"
+        app:layout_constraintBottom_toTopOf="@+id/rightButton"
+        app:layout_constraintEnd_toEndOf="@+id/rightButton"
+        app:layout_constraintStart_toStartOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/shootUpBtn"
+        app:srcCompat="@drawable/baseline_arrow_upward_24" />
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/leftButton"
+        app:layout_constraintEnd_toStartOf="@+id/shootRightBtn"
+        app:layout_constraintTop_toTopOf="@+id/leftButton"
+        app:srcCompat="@drawable/baseline_arrow_forward_24" />
+
+    <ImageButton
+        android:id="@+id/downButton"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/shootDownBtn"
+        app:layout_constraintEnd_toEndOf="@+id/rightButton"
+        app:layout_constraintStart_toStartOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/rightButton"
+        app:srcCompat="@drawable/baseline_arrow_downward_24" />
+
+    <Button
+        android:id="@+id/shootUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Shoot"
+        app:layout_constraintEnd_toEndOf="@+id/upButton"
+        app:layout_constraintTop_toTopOf="@+id/port" />
+
+    <Button
+        android:id="@+id/shootRightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:text="Shoot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rightButton" />
+
+    <Button
+        android:id="@+id/shootLeftBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="23dp"
+        android:text="Shoot"
+        app:layout_constraintEnd_toStartOf="@+id/leftButton"
+        app:layout_constraintTop_toTopOf="@+id/leftButton" />
+
+    <Button
+        android:id="@+id/shootDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="16dp"
+        android:text="Shoot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logger" />
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="43dp"
+        android:text="Scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

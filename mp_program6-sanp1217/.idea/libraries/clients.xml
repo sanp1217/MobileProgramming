@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="clients">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/clients/uinput.jar!/" />
+      <root url="jar://$PROJECT_DIR$/clients/sqr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/clients/strafe.jar!/" />
+      <root url="jar://$PROJECT_DIR$/clients/guard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
